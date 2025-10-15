@@ -6,10 +6,14 @@ import com.design.pattern.builder.one.model.TradeSummary;
 
 public class HedgeFundRiskReportBuilder implements ReportBuilder {
 
-    private EODReport report;
+    private final EODReport report;
 
-    public HedgeFundRiskReportBuilder() {
+    protected HedgeFundRiskReportBuilder() {
         this.report = new EODReport();
+    }
+
+    public static ReportBuilder builder() {
+        return new HedgeFundRiskReportBuilder();
     }
 
     @Override
@@ -31,7 +35,7 @@ public class HedgeFundRiskReportBuilder implements ReportBuilder {
     }
 
     @Override
-    public EODReport getReport() {
+    public EODReport build() {
         // Return the constructed EODReport specific to Hedge Fund Risk Report
         return report;
     }

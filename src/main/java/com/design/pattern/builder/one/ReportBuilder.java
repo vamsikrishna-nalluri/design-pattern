@@ -10,5 +10,5 @@ public interface ReportBuilder {
 
     ReportBuilder buildRiskMetrics();
 
-    EODReport getReport();
+    EODReport build();
 }

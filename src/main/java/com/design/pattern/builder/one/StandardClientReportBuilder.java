@@ -33,7 +33,7 @@ public class StandardClientReportBuilder implements ReportBuilder{
     }
 
     @Override
-    public EODReport getReport() {
+    public EODReport build() {
         return report;
     }
 }
